@@ -1,0 +1,134 @@
+:root {
+    --cyan : hsl(179, 62%, 43%);
+    --bright-yellow : hsl(71, 73%, 54%);
+    --light-gray : hsl(204, 43%, 93%);
+    --grayish-blue : hsl(218, 22%, 67%);
+    --font-size : 1rem;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+    color : #fff;
+    line-height: 1.5;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 50%;
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 4px #ccc);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main > * {
+    padding: 2.5rem 2.5rem;
+}
+
+.content {
+    background-color: #fff;
+    grid-column: 1 / 3;
+    border-radius: 10px 10px 0 0;
+}
+.content h1 {
+    color: var(--cyan);
+    margin-bottom: 1.75rem;
+}
+.content h2{
+    color: var(--bright-yellow);
+    margin-bottom: 0.75rem;
+}
+.content p {
+    color: var(--grayish-blue);
+}
+.signup {
+    background-color: var(--cyan);
+    border-bottom-left-radius: 10px;
+}
+.signup h2 {
+    margin-bottom: 0.5rem;
+}
+.signup p {
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+}
+.price {
+    font-size: 2rem;
+}
+.price-plan {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.tenure {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.signup button {
+    width: 100%;
+    border: none;
+    background-color: var(--bright-yellow);
+    font-weight: 700;
+    padding: 1.3em 2em;
+    color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.whyus {
+    background-color: var(--cyan);
+    opacity: 0.8;
+    font-weight: 400;
+    border-bottom-right-radius: 10px;
+}
+.whyus p {
+    max-width: 85%;
+    opacity: 0.8;
+}
+.whyus h2{
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width : 930px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+    .content {
+        grid-column: 1;
+    }
+    .whyus {
+        border-bottom-left-radius: 10px;
+    }
+    .signup {
+        border-bottom-left-radius: 0px;
+    }
+}
+@media screen and (max-width : 620px) {
+    main {
+        margin: 10%;
+    }
+    body {
+        height: 0%;
+        display: block;
+    }
+    main > * {
+        padding: 1.5rem 1.5rem;
+    }
+}
